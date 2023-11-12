@@ -17,27 +17,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        //to make center without wrap with center in appBar
-        centerTitle: true,
-        title: Text(
-          "Player Tone App",
+        appBar: AppBar(
+          elevation: 0.0,
+          //to make center without wrap with center in appBar
+          centerTitle: true,
+          title: Text(
+            "Player Tone App",
+          ),
         ),
-      ),
-      body:
-      Column(
-        children: [
-          ItemWidget(cot: container[0],),
-          ItemWidget(cot: container[1],),
-          ItemWidget(cot: container[2],),
-          ItemWidget(cot: container[3],),
-          ItemWidget(cot: container[4],),
-          ItemWidget(cot: container[5],),
-          ItemWidget(cot: container[6],),
+        body: Column(
+          children: getItem(),
+        ));
+  }
 
-        ],
-      )
-    );
+  List<ItemWidget> getItem() {
+    List<ItemWidget> items = [];
+    for (var colors in container) {
+      items.add(ItemWidget(cot: colors));
+    }
+    return items;
   }
 }
