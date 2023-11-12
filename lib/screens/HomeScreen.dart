@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tunes_player_app/component/ItemWidget.dart';
+import 'package:tunes_player_app/Widets/ItemWidget.dart';
 import 'package:tunes_player_app/models/ContainerModel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,18 +18,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Player Tone App",
-          ),
+        elevation: 0.0,
+        //to make center without wrap with center in appBar
+        centerTitle: true,
+        title: Text(
+          "Player Tone App",
         ),
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => ItemWidget(
-          cot: container[index],
-        ),
-        itemCount: container.length,
-      ),
+      body:
+      Column(
+        children: [
+          ItemWidget(cot: container[0],),
+          ItemWidget(cot: container[1],),
+          ItemWidget(cot: container[2],),
+          ItemWidget(cot: container[3],),
+          ItemWidget(cot: container[4],),
+          ItemWidget(cot: container[5],),
+          ItemWidget(cot: container[6],),
+
+        ],
+      )
     );
   }
 }

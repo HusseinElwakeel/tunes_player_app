@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tunes_player_app/component/ItemWidget.dart';
 import 'package:tunes_player_app/screens/HomeScreen.dart';
 
 void main() {

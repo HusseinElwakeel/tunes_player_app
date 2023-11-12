@@ -11,16 +11,10 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final double height = 115.0;
 
-    return GestureDetector(
-      onTap: () async {
-        final player = AudioPlayer();
-        await player.play(AssetSource(cot.sound));
-      },
-      child: Container(
-        color: cot.color,
-        height: height,
-        width: double.infinity,
-      ),
+    return Container(
+      color: cot.color,
+      height: height,
+      width: double.infinity,
     );
   }
 }
