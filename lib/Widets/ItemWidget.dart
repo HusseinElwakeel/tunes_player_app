@@ -9,12 +9,11 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double height = 115.0;
 
-    return Container(
-      color: cot.color,
-      height: height,
-      width: double.infinity,
+    return Expanded(
+      child: Container(
+        color: cot.color,
+      ),
     );
   }
 }
