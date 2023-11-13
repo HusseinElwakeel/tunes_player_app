@@ -9,10 +9,12 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Expanded(
-      child: Container(
-        color: cot.color,
+      child: GestureDetector(
+        onTap: () => cot.PlaySound(),
+        child: Container(
+          color: cot.color,
+        ),
       ),
     );
   }

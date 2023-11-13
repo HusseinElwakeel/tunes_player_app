@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Column(
           // list.map((any thing) => what you want to change or connect the colors with item widget
-          children: container.map((e) => ItemWidget(cot: e)).toList(),
+          children: container.map((items) => ItemWidget(cot: items)).toList(),
         ));
   }
   //using for loop and methods
