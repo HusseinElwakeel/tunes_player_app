@@ -30,12 +30,4 @@ class HomeScreen extends StatelessWidget {
           children: container.map((items) => ItemWidget(cot: items)).toList(),
         ));
   }
-  //using for loop and methods
-  // List<ItemWidget> getItem() {
-  //   List<ItemWidget> items = [];
-  //   for (var colors in container) {
-  //     items.add(ItemWidget(cot: colors));
-  //   }
-  //   return items;
-  // }
 }
