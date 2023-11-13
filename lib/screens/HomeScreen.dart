@@ -26,15 +26,16 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         body: Column(
-          children: getItem(),
+          // list.map((any thing) => what you want to change or connect the colors with item widget
+          children: container.map((e) => ItemWidget(cot: e)).toList(),
         ));
   }
-
-  List<ItemWidget> getItem() {
-    List<ItemWidget> items = [];
-    for (var colors in container) {
-      items.add(ItemWidget(cot: colors));
-    }
-    return items;
-  }
+  //using for loop and methods
+  // List<ItemWidget> getItem() {
+  //   List<ItemWidget> items = [];
+  //   for (var colors in container) {
+  //     items.add(ItemWidget(cot: colors));
+  //   }
+  //   return items;
+  // }
 }
